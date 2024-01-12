@@ -95,6 +95,13 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **DUS (Depth Up-Scaling)** - model layers are duplicated, pruned, pretrained, and then replace the original versions of the trained layers, resulting in additional model layers that improve performance. Developed as a way of enhancing small models without using MoE.
 
+**Lattice codebooks** - to add.
+
+**Incoherenct matrices** - to add.
+
+**Adaptive rounding** - to add.
+
+
 # Benchmarks
 Tests used to empirically evaluate the model’s capabilities in various domains. Often used in training data, resulting in a perfect showcase of overfitting /  Goodheart’s Law: “ When a measure becomes a target, it ceases to be a good measure”.
 
@@ -447,6 +454,7 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 
 # Augmenting Models
+Ways of improving or changing a model's capabilities or performance without modifying the model.
 
 **RAG (Retrieval Augmented Generation)** - to add.
 
@@ -467,9 +475,3 @@ I haven't looked into these yet.
 **BLOOM** - to add.
 
 **vLLM** - to add.
-
-**Lattice codebooks** - to add.
-
-**Incoherenct matrices** - to add.
-
-**Adaptive rounding** - to add.
