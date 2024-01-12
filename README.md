@@ -479,9 +479,9 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 # Augmenting Models
 Ways of improving or changing a model's capabilities or performance without modifying the model.
 
-**RAG (Retrieval Augmented Generation)** - to add.
+**RAG (Retrieval Augmented Generation)** - Documents and other files of reference are uploaded and converted into a vector database. The model is then enabled to search this database and extract relevant information, which is then incorporated into the response. Helps to increase the model's factual accuracy or add information to the model without training on it.
 
-**Vector Databases** - to add.
+**Vector Databases** - Documents and other source material are analyzed for semantic relationships. These relationships are then stored in a vector database, making relevant context easier and faster to retrieve.
 
 
 # Implementation - UIs, backends, etc.
