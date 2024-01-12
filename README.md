@@ -291,9 +291,9 @@ Different components within the model architecture. I’m not super familiar wit
 **V (Value) Layer** - This layer contains the actual content that will be shared in response to the query. Like a detailed definition or explanation behind the key.
 
 # Loaders
-**Transformers** - to add.
+**Transformers** - loads FP16 or FP32 models. More detail here: https://github.com/oobabooga/text-generation-webui/wiki/04-%E2%80%90-Model-Tab#transformers
 
-**Llama.cpp** (GGUFs)
+**Llama.cpp** (GGUFs) chances are good you're using this.
 
   N-gpu-layers - number of layers to offload to GPU to accelerate CPU inference. 0 = CPU only.
 
@@ -331,19 +331,21 @@ No_use_fast - disables fast version of tokenizer. Use only if the tokenizer for 
 
 Disable_exllama - use when loading GPTQ models with transformers loader. They will not work otherwise.
 
-**HF loaders** - to add.
+**HF loaders** - Similar to non-HF loaders, but with transformers samplers, and using the transformers tokenizer instead of the internal llama.cpp tokenizer.
 
 **ExLlama** - to add.
 
-**ExLlamav2** - to add.
+**ExLlamav2** - loads GPTQ and EXL2 models.
+
+Cache_8bit - create 8-bit precision cache instead of 16-bit. Saves VRAM but increases perplexity. Use allows for very long contexts lengths more easily.
 
 **AutoGPTQ** - to add.
 
-**AutoAWQ** - to add.
+**AutoAWQ** - loads AWQ models. See link above.
 
-**GPTQ-for-Llama** - to add.
+**GPTQ-for-Llama** - loads GPTQ models. See link above.
 
-**cTransformers** - to add.
+**cTransformers** - loads GGUF and GGML models. Great range of compatibility if your model doesn't work with transformers loader.
 
 **QUIP# (Quantization with Incoherence Processing)** - 
 
@@ -504,3 +506,5 @@ I haven't looked into these yet.
 **BLOOM** - to add.
 
 **vLLM** - to add.
+
+**Triton** - to add.
