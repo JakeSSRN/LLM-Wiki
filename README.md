@@ -30,9 +30,13 @@ Many users recommend using a smaller quant of a larger model rather than a large
 **K quants** - a specific type of quantization used for GGUF files. It is adaptive, more heavily compressing less vital parts of the model while using less compression in more important parts. It does not play well with Mixtral models at the moment - use regular Q quants instead.
 
 **S, M, and L (Quantization Mixes)** - different levels of quantization are used for different layers in the model.
+
 S = same quant level used across the whole model. Results in maximum compression and quality loss.
+
 M = Uses one level lower compression for the attention and feedforward layers. Slightly less compression, slightly lower quality loss than S.
+
 L = Uses two levels lower compression for the attention and feedforward layers. SIightly less compression, slightly lower quality loss than M.
+
 There are some exceptions to these rules. See the link ending in “1684” above for more details.
 
 **BPW (bits per weight)** - quantization notation used mostly for EXL2 files. It tends to use more precise numbers, like 4.65, 5.0, etc. These translate roughly to the round numbers of Q quants.
