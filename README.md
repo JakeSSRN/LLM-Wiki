@@ -71,6 +71,8 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **Training** - the computational process that refines the full matrix of weights of the model. Models can be trained on a narrow set of data for speciality in specific tasks, or a broader range of data for a more all-around model. As mentioned above, if you have to use smaller models due to hardware constraints, select one that is trained on the type of tasks you want to use it for.
 
+**Epoch** - one complete pass on the training data. Multiple epochs can improve retention of information, but too many can result in overfitting and inflexibility of the model. Experiment with different numbers of epochs to find the optimal number of passes. 1 to 3 epochs are common.
+
 **LoRA (Low Rank Adaptation)** - a method of modifying a model without fully retraining it. Instead of modifying the entire weight matrix, it inserts small, low-rank "adapter" matrices at key points within the LLM architecture. These adapters have significantly fewer parameters (usually a few hundred MBs) compared to the full weight matrix. This requires much less time and compute to develop. LoRAs cannot be used between models, they are specific to the model they were trained with. This may be fixed with S-LoRA.
 
 **QLoRA (Quantized Low Rank Adaptation)** - quantizes the model before training the LoRa weights. This creates a “double quant”, one for the model and one for the LoRA. Along with a few other features, this vastly reduces the resource demand for training and running the model and the LoRA.
