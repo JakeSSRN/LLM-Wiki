@@ -42,3 +42,18 @@ There are some exceptions to these rules. See the link ending in “1684” abov
 **QUIP#** (Quantization with Incoherence Processing) - a 2-bit quantization method that hugely reduces degradation. Uses incoherent matrices to reduce correlation between them, making each piece of information less related to the others, and therefore easier to compress. Incorporates lattice codebooks, which reduce information loss during compression. Also includes adaptive rounding to tailor the individual weights more intelligently. Essentially makes 2-bit quants worthwhile.
 
 **SqueezeLLLM** - quantization method that intelligently applies dense and sparse quantization, incoherent matrices, lattice codebooks, and adaptive rounding (see above).
+
+# File Types
+**FP16** - the original, unquantized format of most models. Highest inference quality, massive resource use. 
+
+**GGML (GPT-Generated Model Language)** - Original CPU/GPU split filetype. Not used much any more due to the development of GUUF.
+
+**GGUF (GPT-Generated Unified Format)** - GPU/CPU split file type, successor to GGML. Extensible, unlike GGML, with better tokenization and support for special tokens. Self-contained, with recommended model and loader metadata in the file. Use if you can’t fit the whole model into VRAM. Comes in many quantizations. Load with llama.cpp.
+
+**AWQ (Activation-aware Weight Quantization)** - Quantized GPU only filetype. Supposedly degradation from quantization is reduced with this filetype. Can be faster than GPTQ. Load with AutoAWQ. Only works with single-GPU setups currently.
+
+**GPTQ (Generative Pretrained Transformer Quantization)** - Quantized GPU only filetype. Quality may be sub-par compared to GGUF. Not very popular since the advent of EXL2.
+
+**EXL2 (ExLlamaV2)** - extremely fast GPU only filetype using the exllamav2 loader. Comes in various quants. Performance may degrade in zero-shot prompting compared to GGUF. Cannot be run on Tesla GPU architecture.
+
+Performance of different quantization / file types is a subject of ongoing research and debate. Currently, it seems like GGUF is the absolute highest quality method, with moderate speed, depending on how many layers you can offload. EXL2 is narrowing the gap in terms of support and availability, but may still result in slightly lower quality outputs. Essentially: quality: GGUF, speed: EXL2.
