@@ -347,7 +347,7 @@ Cache_8bit - create 8-bit precision cache instead of 16-bit. Saves VRAM but incr
 
 **cTransformers** - loads GGUF and GGML models. Great range of compatibility if your model doesn't work with transformers loader.
 
-**QUIP# (Quantization with Incoherence Processing)** - 
+**QUIP# (Quantization with Incoherence Processing)** - to add.
 
 **HQQ** - to add.
 
