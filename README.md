@@ -249,8 +249,8 @@ Q4 + 4K context. Approx. values.
 | --------------- | ---------- |
 | Tiny (<2.5B) | 2 GB |
 | 3B | 4 GB |
-| 7B | 2 GB |
-| 13B | 2 GB |
+| 7B | 8 GB |
+| 13B | 12 GB |
 | ~30B | 24 GB |
 | 70B | 64 GB |
 | 120B | 128 GB |
