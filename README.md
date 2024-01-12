@@ -247,7 +247,7 @@ Note: If your model is repeating itself uncontrollably, you have probably asked 
 
 **Chunk tokens** - to add.
 
-**Dynamic Temp** - to add.
+**Dynamic Temp** - Adjusts the temperature proportionally to the standard deviation of the sampled set of tokens. Allows for more creative responses while still maintaining coherence.
 
 # Instruction Formats
 The format in which instruction-following training data was appended. This whole thing is a mess, and is in dire need of standardization / unification. Using a format the model wasn’t trained for will produce poor outputs.
