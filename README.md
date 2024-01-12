@@ -442,6 +442,14 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 **GitHub** - developer platform for sharing, collaborating on, and developing code projects. Most UIs and other AI tools can be found here.
 
+
+# Augmenting Models
+
+**RAG (Retrieval Augmented Generation)** - to add.
+
+**Vector Databases** - to add.
+
+
 # To Be Categorized
 I haven't looked into these yet.
 
@@ -455,9 +463,4 @@ I haven't looked into these yet.
 
 **BLOOM** - to add.
 
-
-# Augmenting Models
-
-**RAG (Retrieval Augmented Generation)** - to add.
-
-**Vector Databases** - to add.
+**vLLM** - to add.
