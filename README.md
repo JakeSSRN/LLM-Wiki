@@ -125,6 +125,7 @@ Tests used to empirically evaluate the model’s capabilities in various domains
 
 **Many-shot** - 5-20+ examples are given to the model.
 
+
 # “Flavors” of Models
 Some of these are base models, some of them are model modification techniques.
 
@@ -167,6 +168,8 @@ Some of these are base models, some of them are model modification techniques.
 **Airoboros** - family of models developed by Jon Durbin. Trained on synthetic instruction data derived from a heavily modified version of the self-instruct method of training.
 
 **Zephyr** - a family of models that were some of the first to use DPO. Generally small, very capable models that focus on accuracy and helpfulness.
+
+**SUS** - to add.
 
 # Controlling Outputs with Parameters and Samplers
 Most of this is taken from Text-Generation-Webui’s explanations here: https://github.com/oobabooga/text-generation-webui/wiki/03-%E2%80%90-Parameters-Tab
