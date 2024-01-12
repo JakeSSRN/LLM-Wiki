@@ -182,6 +182,8 @@ Some of these are base models, some of them are model modification techniques.
 
 **XWIN** - family of models developed by XwinLM. Use supervised fine tuning, reward models, and RHLF to develop very creative, capable models.
 
+**NoroMaid** - 
+
 # Controlling Outputs with Parameters and Samplers
 Most of this is taken from Text-Generation-Webui’s explanations here: https://github.com/oobabooga/text-generation-webui/wiki/03-%E2%80%90-Parameters-Tab
 
@@ -382,6 +384,8 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 **Natural Instructions** - millions of instructions from 1600+ task categories. Improves many types of instruction following.
 
+**NoroMaid** - family of roleplay-focused models trained on Aesir Private RP dataset.
+
 **OASST1** - dataset of human-generated and annotated assistant-style conversations. Makes the model more helpful.
 
 **OpenBookQA** - Question answering improvement dataset.
@@ -410,6 +414,7 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 **Toxic** - toxic and illegal content designed to remove censorship from the model.
 
+
 # Notable Players in the LLM Space
 
 **Individuals:**
@@ -428,7 +433,9 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 **u/FPHam** - Reddit, known as FartyPants on GitHub. Has developed several useful Oobabooga extensions and novelty models on HF.
 
-**LoneStriker** - to add.
+**LoneStriker** - Known for quantizting hundreds of models in various levels of EXL2.
+
+**Gryphe** - developed the popular MythoMax models, as well as others. He focuses on roleplay and creative models that tend to perform very well.
 
 **Organizations:**
 
