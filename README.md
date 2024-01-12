@@ -107,6 +107,8 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **Adaptive rounding** - to add.
 
+**Reject sampling** - a component of fine-tuning where outputs are evaluated and unsuitable low-quality ones are excluded based on predefined criteria and the better quality outputs are fed back into the fine-tuning process.
+
 
 # Benchmarks
 Tests used to empirically evaluate the model’s capabilities in various domains. Often used in training data, resulting in a perfect showcase of overfitting /  Goodheart’s Law: “ When a measure becomes a target, it ceases to be a good measure”.
@@ -176,6 +178,8 @@ Some of these are base models, some of them are model modification techniques.
 **Zephyr** - a family of models that were some of the first to use DPO. Generally small, very capable models that focus on accuracy and helpfulness.
 
 **SUS** - to add.
+
+**XWIN** - family of models developed by XwinLM. Use supervised fine tuning, reward models, and RHLF to develop very creative, capable models.
 
 # Controlling Outputs with Parameters and Samplers
 Most of this is taken from Text-Generation-Webui’s explanations here: https://github.com/oobabooga/text-generation-webui/wiki/03-%E2%80%90-Parameters-Tab
@@ -454,6 +458,8 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 **EleutherAI** - to add.
 
 **LMSys** - to add.
+
+**XwinLM** - to add.
 
 **Andreessen-Horowitz (a16z)** - venture capital agency that focuses on technological advancement. Funds a lot of GPU training time for the open source community.
 
