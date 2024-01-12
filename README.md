@@ -42,7 +42,7 @@ L = Uses two levels lower compression for the attention and feedforward layers. 
 
 There are some exceptions to these rules. See the link ending in “1684” above for more details.
 
-**BPW (bits per weight)** - quantization notation used mostly for EXL2 files. It tends to use more precise numbers, like 4.65, 5.0, etc. These translate roughly to the round numbers of Q quants.
+**BPW (bits per weight)** - quantization notation used mostly for EXL2 files. It tends to use more precise numbers, like 2.4, 4.65, etc. These translate roughly to the round numbers of Q quants.
 
 **H number (head quantization)** - Similar to K quants, but for EXL2 files. Compresses only certain layers, typically attention heads, while leaving other layers less or uncompressed.
 
