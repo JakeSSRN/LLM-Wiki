@@ -158,3 +158,67 @@ Some of these are base models, some of them are model modification techniques.
 
 **Zephyr** - a family of models that were some of the first to use DPO. Generally small, very capable models that focus on accuracy and helpfulness.
 
+# Controlling Outputs with Parameters and Samplers
+Most of this is taken from Text-Generation-Webui’s explanations here: https://github.com/oobabooga/text-generation-webui/wiki/03-%E2%80%90-Parameters-Tab
+
+**Logits** - un-normalized probabilities attached to each token. Normalized probabilities occur from 0 (never occurs) to 1 (always occurs).
+
+**Temperature** - Broad, loose control of the randomness of the output. Higher temperature allows for more diversity and creativity, but can lead to incoherent outputs.
+
+**Temperature last** - runs the temperature parameter last. Can produce better results than running first in some situations.
+
+**Top P** - the model ranks all possible next tokens based on their normalized probability distribution. Top P selects a subset of these tokens with a cumulative probability that does not exceed P. Larger top P will allow for more creative and diverse outputs.
+
+**Top K** - Like top P, but selects from the pool of tokens with K or greater probability. Lower top K makes text more coherent, but less creative.
+
+**Min P** - Tells the model to disregard tokens with a probability less than P. Higher min P results in more coherent text while maintaining diversity more strongly than top P or top K.
+
+**Mirostat + Tau** - Adjusts temperature on a per-token basis. Tau is the value that controls temperature. 8 is recommended value.
+
+**Mirostat ETA** - ??? 0.1 is recommended value.
+
+**Max new tokens** - The maximum number of new tokens to generate. If you are getting nonsense from your model after a certain length of reply, try shortening this.
+
+**Min length** - minimum number of new tokens to generate. Ensures replies aren’t just an emoji or whatever.
+
+**Repetition penalty** - How strongly to deter the model from repeating itself. Higher = less repetition. High rep penalty can create odd responses. Low rep penalty can lead to runaway repetition.
+
+Note: If your model is repeating itself uncontrollably, you have probably asked it to create a response longer than any response it was trained on. Shorten your max new token length or pick a model trained on longer examples.
+
+**Repetition penalty range** - how far back in the response to apply repetition penalty.
+
+**Presence penalty** - Similar to repetition_penalty, but with an additive offset on the raw token scores instead of a multiplicative factor. It may generate better results. 0 means no penalty, higher value = less repetition, lower value = more repetition. Previously called "additive_repetition_penalty".
+
+**Frequency penalty** - Repetition penalty that scales based on how many times the token has appeared in the context. Be careful with this; there's no limit to how much a token can be penalized.
+
+**Typical P** - If not set to 1, select only tokens that are at least this much more likely to appear than random tokens, given the prior text.
+
+**TFS** - Tries to detect a tail of low-probability tokens in the distribution and removes those tokens.
+
+**Top A** - Tokens with probability smaller than (top_a) * (probability of the most likely token)^2 are discarded.
+
+**Epsilon cutoff** - In units of 1e-4; a reasonable value is 3. This sets a probability floor below which tokens are excluded from being sampled.
+
+**ETA cutoff** - In units of 1e-4; a reasonable value is 3. The main parameter of the special Eta Sampling technique.
+
+**Guidance scale** - The main parameter for Classifier-Free Guidance (CFG). 1.5 is recommended value.
+
+**enalty alpha** - Contrastive Search is enabled by setting this to greater than zero and unchecking "do_sample". It should be used with a low value of top_k, for instance, top_k = 4.
+
+**Do sample** - When unchecked, sampling is entirely disabled, and greedy decoding is used instead (the most likely token is always picked).
+
+**Encoder repetitions penalty** - Also known as the "Hallucinations filter". Used to penalize tokens that are not in the prior text. Higher value = more likely to stay in context, lower value = more likely to diverge.
+
+**No repeat ngram size** - If not set to 0, specifies the length of token sets that are completely blocked from repeating at all. Higher values = blocks larger phrases, lower values = blocks words or letters from repeating. Only 0 or high values are a good idea in most cases.
+
+**Num beams** - Number of beams for beam search. 1 means no beam search. [What is beam search?]
+
+**Length penalty** - Used by beam search only. Length_penalty > 0.0 promotes longer sequences, while length_penalty < 0.0 encourages shorter sequences.
+
+**Early_stopping** - Used by beam search only. When checked, the generation stops as soon as there are "num_beams" complete candidates; otherwise, a heuristic is applied and the generation stops when is it very unlikely to find better candidates.
+
+**DruGS (Deep Random micro-Glitch Sampling)** - Injects random noise into the inference as it passes through layers, making responses more creative and less deterministic. Still experimental - work is being done to find out how many and which layers produce optimal results with noise injection.
+
+**Chunk tokens** - 
+
+**Dynamic Temp** - 
