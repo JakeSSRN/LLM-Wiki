@@ -467,3 +467,9 @@ I haven't looked into these yet.
 **BLOOM** - to add.
 
 **vLLM** - to add.
+
+**Lattice codebooks** - to add.
+
+**Incoherenct matrices** - to add.
+
+**Adaptive rounding** - to add.
