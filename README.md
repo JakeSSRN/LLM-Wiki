@@ -476,6 +476,8 @@ Ways of improving or changing a model's capabilities or performance without modi
 
 
 # Implementation - UIs, backends, etc.
+Not comprehensive, just a list of the major players.
+
 To add.
 
 
