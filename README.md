@@ -51,7 +51,7 @@ There are some exceptions to these rules. See the link ending in “1684” abov
 **SqueezeLLLM** - quantization method that intelligently applies dense and sparse quantization, incoherent matrices, lattice codebooks, and adaptive rounding (see above).
 
 # File Types
-**FP16** - the original, unquantized format of most models. Highest inference quality, massive resource use. 
+**FP16** - the original, unquantized format of most models. Highest inference quality, massive resource use. Currently required for training LoRAs.
 
 **GGML (GPT-Generated Model Language)** - Original CPU/GPU split filetype. Not used much any more due to the development of GUUF.
 
