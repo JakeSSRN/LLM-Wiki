@@ -114,3 +114,47 @@ Tests used to empirically evaluate the model’s capabilities in various domains
 **Few-shot** - 2-5 examples of the desired type of output are given in the prompt.
 
 **Many-shot** - 5-20+ examples are given to the model.
+
+# “Flavors” of Models
+Some of these are base models, some of them are model modification techniques.
+
+**LLaMA** - built on Google’s Transformer architecture. Very common and well integrated. Strong with factual tasks and question answering, weaker with creative tasks and coding. Base context of 4096 tokens.
+
+**Falcon** - A modified transformer architecture improving performance and efficiency. Trained on curated dataset RefinedWeb. More creative than llama, but may be less factually accurate with reduced information retrieval performance. Not much innovation on this front due to usability issues, has fallen out of popularity.
+
+**Mistral** - family of models developed by MistralAI. Known for their unusually high performance for their size due to the implementation of sparse transformers. Mistral was also the first to implement the mixture-of-experts (MoE) model architecture.
+
+**MPT** - early entrants into the open source model arena. Haven’t come out with much lately and have faded into comparative obscurity.
+
+**StarCoder** - family of models specializing in code generation. Less common.
+
+**Replit** - family of coding models. Uncommon.
+
+**GPT-Neo-X** - developed by EleutherAI. Uncommon.
+
+**MoE (Mixture of Experts)** - an amalgamation of several (originally 8) smaller, specialized models that will be intelligently invoked by a filter depending on the task at hand. This allows for the capability (and memory requirements) of a larger model while only requiring the compute power of a smaller model. It is also less demanding to train.
+
+**Mamba** - novel neural network architecture developed as an alternative to transformer models. Its greatest advantage is linear scaling with context, as opposed to exponential scaling in transformer models.  This allows for extremely long context windows with minimal degradation of performance. This is further enhanced by the use of selective state spaces, only selecting relevant context rather than reviewing the full context every time.
+
+**WizardLM** - family of models trained with Evol-Instruct. Specializes in instruction following and code generation.
+
+**REMM** - an older term referring to the MythoX family of models, 13B models known for their creativity and well-rounded abilities.
+
+**Phi** - small models (~2B) developed by Microsoft. Generally thought to be on par with the performance of 7B models, which is impressive. Not good for chat, RP, storytelling, etc.
+
+**Bagel** - models trained on extremely diverse training data, developed by Jon Durbin. Regular versions based on Yi, MoE versions based on Mistral/Mixtral.
+
+**Alpaca** - llama based model developed for instruction-following by Stanford and Meta.
+
+**Vicuna** - another llama based model, this one developed by Stanford and Meta. Trained on GPT-4 conversations.
+
+**Guanaco** - llama based model trained with a 4-bit QLoRA on the OASST1 dataset.
+
+**Solar** - ~11B model introduced by Upstage.  It uses depth-upscaling (DUS) to improve model performance with modest increase in model size.
+
+**Yi** - 7B and 34B models developed by 01-AI. Known for their power and well-rounded abilities. Extremely popular.
+
+**Airoboros** - family of models developed by Jon Durbin. Trained on synthetic instruction data derived from a heavily modified version of the self-instruct method of training.
+
+**Zephyr** - a family of models that were some of the first to use DPO. Generally small, very capable models that focus on accuracy and helpfulness.
+
