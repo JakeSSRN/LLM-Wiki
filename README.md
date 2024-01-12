@@ -92,3 +92,25 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **DUS (Depth Up-Scaling)** - model layers are duplicated, pruned, pretrained, and then replace the original versions of the trained layers, resulting in additional model layers that improve performance. Developed as a way of enhancing small models without using MoE.
 
+# Benchmarks
+Tests used to empirically evaluate the model’s capabilities in various domains. Often used in training data, resulting in a perfect showcase of overfitting /  Goodheart’s Law: “ When a measure becomes a target, it ceases to be a good measure”.
+
+**AI2 Reasoning Challenge (ARC)** - 25-shot test of grade-school science questions.
+
+**HellaSwag** - 10-shot test of commonsense inference. Humans average 95%.
+
+**MMLU** - 5-shot test of multitask accuracy, covering basic math, US history, computer science, law, and more.
+
+**TruthfulQA** - 0-shot test to measure the model’s tendency to repeat common falsehoods.
+
+**Winogrande** - 5-shot test for commonsense reasoning.
+
+**GSM8K** - 5-shot test to evaluate the model’s skills in basic math and multi-step mathematical reasoning.
+
+**Zero-shot prompting** - giving the model no examples and trusting it to figure out how to fulfill the request based on its own internal understanding of the prompt. This is the most difficult test for a model and often generates poor results, especially in smaller models.
+
+**Single-shot** - the prompt contains a single example of the expected type of output.
+
+**Few-shot** - 2-5 examples of the desired type of output are given in the prompt.
+
+**Many-shot** - 5-20+ examples are given to the model.
