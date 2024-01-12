@@ -79,6 +79,8 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **Fine tune** - the process of adapting a pre-trained LLM to perform well on a specific task or domain. This is often a full retraining, and thus can be resource intensive.
 
+**SFT (Supervised Fine Tuning)** - fine tuning using human-validated training data.
+
 **RoPE (Rotary Position Embeddings)** - instead of relating words in the context only to their neighbors, RoPE assigns two values to word placement: absolute position in the context and relative position compared to other words in the context. This additional data makes it easier for the model to recall information over longer contexts.
 
 **YaRN** - RopE-style (see above) training method that extends the context of Llama 2 models to 128k tokens.
