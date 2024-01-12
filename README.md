@@ -282,7 +282,7 @@ Different components within the model architecture. I’m not super familiar wit
 
 **Q (Query) layer** - represents the information that a particular element in the sequence is looking for from other elements. Imagine it like highlighting keywords based on the word itself and its surrounding context.
 
-**K (Key) layer** - holds the information that other elements in the sequence can provide in response to the query. Acts as a context label.
+**K (Key) layer** - holds the information what information other elements in the sequence can provide in response to the query. Acts as a context label.
 
 **V (Value) Layer** - This layer contains the actual content that will be shared in response to the query. Like a detailed definition or explanation behind the key.
 
