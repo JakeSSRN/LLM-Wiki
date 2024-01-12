@@ -385,3 +385,76 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 **Winogrande** - Fill in the blank style prompts. Improves common sense reasoning.
 
 **Toxic** - toxic and illegal content designed to remove censorship from the model.
+
+# Notable Players in the LLM Space
+
+**Individuals:**
+
+**Eric Hartford** - AI researcher and curator of Cognitive Computations. Helped develop the Dolphin and Samantha models.
+
+**Jon Durbin** - AI researcher, developed models like Airoboros and Bagel.
+
+**Tom Jobbins / TheBloke** - Quantizes thousands of models on HF at an alarming rate. GGUF, GPTQ, AWQ, etc.
+
+**Teknium** - Cofounder of Nous Research. Aids in the development of the Nous Hermes models, among others.
+
+**Tim Dettmers** - deep learning researcher who helped develop the Guanaco models. Check out his blog for useful articles about hardware, etc.
+
+**u/WolframRavenwolf** - Reddit user who conducts extensive testing and ranking of models, particularly for roleplay use.
+
+**u/FPHam** - Reddit, known as FartyPants on GitHub. Has developed several useful Oobabooga extensions and novelty models on HF.
+
+**LoneStriker** - 
+
+**Organizations:**
+
+**Nous Research** - AI research firm. Developed Hermes, YaRN, Capybara, Puffin, and Obsidian models.
+
+**Mistral AI** - developed the Mistral models and the MoE format.
+
+**Stability AI** - developed the Beluga and Zephyr models.
+
+**Meta** - Developed the Llama and Llama 2 models, the most widely used model base.
+
+**Upstage** - AI research firm that developed the currently popular SOLAR models. They also develop other tools and systems of AI research and learning.
+
+**Cognitive Computations** - AI research group founded by Eric Hartford. Developed the Dolphin, Samantha, and WizardLM models. 
+
+**Microsoft** - You should know who this is by now. Developed Bing Chat (formerly Sydney) model based off of GPT-4. They have a controlling stake in OpenAI.
+
+**OpenAI** - The company that started the LLM craze with the release of their ChatGPT model in November 2022.
+
+**Qwen** - Chinese company that developed the Qwen models, known for their capability and censorship. Also develop multimodal models.
+
+**01-AI** - Chinese startup that developed the Yi models, known for their capability and long context length.
+
+**MosaicML** - Machine learning corporation that developed the MPT models.
+
+**Replit** - 
+
+**EleutherAI** - 
+
+**LMSys** - 
+
+**Andreessen-Horowitz (a16z)** - venture capital agency that focuses on technological advancement. Funds a lot of GPU training time for the open source community.
+
+**HuggingFace** - The largest repository for open-source AI software. Where most models are made available.
+
+**GitHub** - developer platform for sharing, collaborating on, and developing code projects. Most UIs and other AI tools can be found here.
+
+# To Be Categorized
+I haven't looked into these yet.
+
+**RAG (Retrieval Augmented Generation)** - 
+
+**Vector Databases** - 
+
+**Grammar** - 
+
+**Special tokens** - 
+
+**Voxta** - 
+
+**VaM** - 
+
+**BLOOM** - 
