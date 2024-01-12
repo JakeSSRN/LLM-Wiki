@@ -105,11 +105,11 @@ Reject sampling - a component of fine-tuning where outputs are evaluated and uns
 
 **DUS (Depth Up-Scaling)** - model layers are duplicated, pruned, pretrained, and then replace the original versions of the trained layers, resulting in additional model layers that improve performance. Developed as a way of enhancing small models without using MoE.
 
-**Lattice codebooks** - model weights are intelligently grouped and assigned to a single numerical value and then stored in multi-dimensional grid (lattice). This compresses the weight file while with less degradation, reducing model size.
+**Lattice codebooks** - model weights are intelligently grouped and assigned to a single numerical value and then stored in multi-dimensional grid (lattice). This compresses the weight file while with less degradation, reducing model size while minimizing loss.
 
-**Incoherent matrices** - 
+**Incoherent matrices** - when the model's weights are assigned to a matrix during training, they are transformed to ensure that their coordiantes not extreme. This makes them better suited for adaptive rounding.
 
-**Adaptive rounding** - to add.
+**Adaptive rounding** - intelligent method of rounding weights that adapts them to minimize the error rounding produces. This reduces the damaging effects of quantization.
 
 # Benchmarks
 Tests used to empirically evaluate the model’s capabilities in various domains. Often used in training data, resulting in a perfect showcase of overfitting /  Goodheart’s Law: “ When a measure becomes a target, it ceases to be a good measure”.
