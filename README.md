@@ -178,7 +178,7 @@ Some of these are base models, some of them are model modification techniques.
 
 **Zephyr** - a family of models that were some of the first to use DPO. Generally small, very capable models that focus on accuracy and helpfulness.
 
-**SUS** - to add.
+**SUS** - family of Yi-based Chinese / English models developed in part by Southern University of Science and Technology, fine-tuned for complex instruction following. 8K context.
 
 **XWIN** - family of models developed by XwinLM. Use supervised fine tuning, reward models, and RHLF to develop very creative, capable models.
 
