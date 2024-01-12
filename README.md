@@ -445,10 +445,6 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 # To Be Categorized
 I haven't looked into these yet.
 
-**RAG (Retrieval Augmented Generation)** - to add.
-
-**Vector Databases** - to add.
-
 **Grammar** - to add.
 
 **Special tokens** - to add.
@@ -458,3 +454,10 @@ I haven't looked into these yet.
 **VaM** - to add.
 
 **BLOOM** - to add.
+
+
+# Augmenting Models
+
+**RAG (Retrieval Augmented Generation)** - to add.
+
+**Vector Databases** - to add.
