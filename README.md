@@ -13,7 +13,7 @@ Note: if you have deep pockets, you can run multiple GPUs in parallel with minim
 
 **Tokens** - the smallest chunk of text a model can process. Like syllables in language. A good rule of thumb is that for English, a token is 0.75 words. 4096 tokens, a common context length, will be about 3,072 words. 32k tokens will be about 24k words.
 
-**Weights** - numerical values assigned to the edges (connections) and between neurons (nodes) within the neural network during training. These represent the strength of the connections, and are adjusted iteratively during training. The weights determine the influence of each connection on the final output and play a critical role in shaping the model’s behavior and performance.
+**Weights** - numerical values assigned to the edges (connections) and between neurons (nodes) within the neural network during training. These represent the strength of the connections, and are adjusted iteratively during training. The weights determine the influence of each connection on the final output and play a critical role in shaping the model’s behavior and performance. Raw, uncompressed weights consume a lot of memory, so ways to reduce this footprint allow for smaller, faster models at the cost of some degradation.
 
 **Perplexity** - a score measuring uncertainty when the model is inferencing. Lower indicates better quality - generally, more intelligent and coherent responses from the model.
 
@@ -46,7 +46,7 @@ There are some exceptions to these rules. See the link ending in “1684” abov
 
 **H number (head quantization)** - Similar to K quants, but for EXL2 files. Compresses only certain layers, typically attention heads, while leaving other layers less or uncompressed.
 
-**QUIP#** (Quantization with Incoherence Processing) - a 2-bit quantization method that hugely reduces degradation. Uses incoherent matrices to reduce correlation between nodes, making each piece of information less related to the others, and therefore easier to compress. Incorporates lattice codebooks, which reduce information loss during compression. Also includes adaptive rounding to tailor the individual weights more intelligently. Essentially makes 2-bit quants worthwhile.
+**QUIP#** (Quantization with Incoherence Processing) - a 2-bit quantization method that hugely reduces degradation. Uses incoherent matrices, lattice codebooks, and adaptive rounding. Essentially makes 2-bit quants worthwhile.
 
 **SqueezeLLLM** - quantization method that intelligently applies dense and sparse quantization, incoherent matrices, lattice codebooks, and adaptive rounding (see above).
 
@@ -103,9 +103,9 @@ Reject sampling - a component of fine-tuning where outputs are evaluated and uns
 
 **DUS (Depth Up-Scaling)** - model layers are duplicated, pruned, pretrained, and then replace the original versions of the trained layers, resulting in additional model layers that improve performance. Developed as a way of enhancing small models without using MoE.
 
-**Lattice codebooks** - to add.
+**Lattice codebooks** - model weights are intelligently grouped and assigned to a single numerical value and then stored in multi-dimensional grid (lattice). This compresses the weight file while with less degradation, reducing model size.
 
-**Incoherenct matrices** - to add.
+**Incoherent matrices** - 
 
 **Adaptive rounding** - to add.
 
