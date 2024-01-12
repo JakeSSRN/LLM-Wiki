@@ -249,6 +249,8 @@ Note: If your model is repeating itself uncontrollably, you have probably asked 
 
 **Dynamic Temp** - Adjusts the temperature proportionally to the standard deviation of the sampled set of tokens. When there are many viable tokens, the model will select tokens of lower probability. When there are few viable tokens, the model will select higher probability tokens. Allows for more creative responses while still maintaining coherence.
 
+**Special tokens** - denote structure and organization of inputs, direct the model towards certain tasks or behaviors, etc. Essentially brief annotations to help the model understand how to view and use the input.
+
 # Instruction Formats
 The format in which instruction-following training data was appended. This whole thing is a mess, and is in dire need of standardization / unification. Using a format the model wasn’t trained for will produce poor outputs.
 
@@ -494,8 +496,6 @@ To add.
 I haven't looked into these yet.
 
 **Grammar** - to add.
-
-**Special tokens** - to add.
 
 **Voxta** - to add.
 
