@@ -38,7 +38,7 @@ S = same quant level used across the whole model. Results in maximum compression
 
 M = Uses one level lower compression for the attention and feedforward layers. Slightly less compression, slightly lower quality loss than S.
 
-L = Uses two levels lower compression for the attention and feedforward layers. SIightly less compression, slightly lower quality loss than M.
+L = Uses two levels lower compression for the attention and feedforward layers. Slightly less compression, slightly lower quality loss than M.
 
 There are some exceptions to these rules. See the link ending in “1684” above for more details.
 
