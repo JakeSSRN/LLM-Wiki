@@ -175,7 +175,7 @@ Most of this is taken from Text-Generation-Webui’s explanations here: https://
 
 **Mirostat + Tau** - Adjusts temperature on a per-token basis. Tau is the value that controls temperature. 8 is recommended value.
 
-**Mirostat ETA** - ??? 0.1 is recommended value.
+**Mirostat ETA** - ??? 0.1 is recommended value. to add.
 
 **Max new tokens** - The maximum number of new tokens to generate. If you are getting nonsense from your model after a certain length of reply, try shortening this.
 
@@ -219,9 +219,9 @@ Note: If your model is repeating itself uncontrollably, you have probably asked 
 
 **DruGS (Deep Random micro-Glitch Sampling)** - Injects random noise into the inference as it passes through layers, making responses more creative and less deterministic. Still experimental - work is being done to find out how many and which layers produce optimal results with noise injection.
 
-**Chunk tokens** - 
+**Chunk tokens** - to add.
 
-**Dynamic Temp** - 
+**Dynamic Temp** - to add.
 
 # Instruction Formats
 The format in which instruction-following training data was appended. This whole thing is a mess, and is in dire need of standardization / unification. Using a format the model wasn’t trained for will produce poor outputs.
@@ -263,7 +263,7 @@ Different components within the model architecture. I’m not super familiar wit
 **V (Value) Layer** - This layer contains the actual content that will be shared in response to the query. Like a detailed definition or explanation behind the key.
 
 # Loaders
-**Transformers** - 
+**Transformers** - to add.
 
 **Llama.cpp** (GGUFs)
 
@@ -303,23 +303,23 @@ No_use_fast - disables fast version of tokenizer. Use only if the tokenizer for 
 
 Disable_exllama - use when loading GPTQ models with transformers loader. They will not work otherwise.
 
-**HF loaders** - 
+**HF loaders** - to add.
 
-**ExLlama** - 
+**ExLlama** - to add.
 
-**ExLlamav2** - 
+**ExLlamav2** - to add.
 
-**AutoGPTQ** - 
+**AutoGPTQ** - to add.
 
-**AutoAWQ** - 
+**AutoAWQ** - to add.
 
-**GPTQ-for-Llama** - 
+**GPTQ-for-Llama** - to add.
 
-**cTransformers** - 
+**cTransformers** - to add.
 
 **QUIP# (Quantization with Incoherence Processing)** - 
 
-**HQQ** - 
+**HQQ** - to add.
 
 # Common Training Data Sets
 Used to train models on specific tasks, contexts, and knowledge. Some of these overlap with the “Flavors of Models” and “Benchmarks” section.
@@ -404,7 +404,7 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 **u/FPHam** - Reddit, known as FartyPants on GitHub. Has developed several useful Oobabooga extensions and novelty models on HF.
 
-**LoneStriker** - 
+**LoneStriker** - to add.
 
 **Organizations:**
 
@@ -430,11 +430,11 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 **MosaicML** - Machine learning corporation that developed the MPT models.
 
-**Replit** - 
+**Replit** - to add.
 
-**EleutherAI** - 
+**EleutherAI** - to add.
 
-**LMSys** - 
+**LMSys** - to add.
 
 **Andreessen-Horowitz (a16z)** - venture capital agency that focuses on technological advancement. Funds a lot of GPU training time for the open source community.
 
@@ -445,16 +445,16 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 # To Be Categorized
 I haven't looked into these yet.
 
-**RAG (Retrieval Augmented Generation)** - 
+**RAG (Retrieval Augmented Generation)** - to add.
 
-**Vector Databases** - 
+**Vector Databases** - to add.
 
-**Grammar** - 
+**Grammar** - to add.
 
-**Special tokens** - 
+**Special tokens** - to add.
 
-**Voxta** - 
+**Voxta** - to add.
 
-**VaM** - 
+**VaM** - to add.
 
-**BLOOM** - 
+**BLOOM** - to add.
