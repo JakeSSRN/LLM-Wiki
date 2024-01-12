@@ -79,19 +79,21 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **Fine tune** - the process of adapting a pre-trained LLM to perform well on a specific task or domain. This is often a full retraining, and thus can be resource intensive.
 
-**SFT (Supervised Fine Tuning)** - fine tuning using human-validated training data.
+(Supervised Fine Tuning) - fine tuning using human-validated training data.
+
+RLHF (Reinforcement Learning through Human Feedback) - Feedback is generated from human input. The data then can be incorporated into the model to guide its responses. Offers more nuanced feedback than DPO.
+
+Reward Models - essentially a "second layer" LLM trained to evaluate the outputs of the main LLM and assign rewards based on how desirable or acceptable those outputs are based on predefined criteria.
+
+DPO (Diredct Preference Optimization) - Multiple response options are given, and the human user chooses their preference. The preferences are then reintegrated into the model to further guide responses.
+
+PPO (Proximal Policy Optimization) - an algorithm often used in conjunction with reward models to train models. It drives the process of adjusting the LLM's behavior based on the guidance provided by the reward model. Often very sensitive to hyperparameter settings, and requires experimentationn to optimize.
+
+Reject sampling - a component of fine-tuning where outputs are evaluated and unsuitable low-quality ones are excluded based on predefined criteria and the better quality outputs are fed back into the fine-tuning process.
 
 **RoPE (Rotary Position Embeddings)** - instead of relating words in the context only to their neighbors, RoPE assigns two values to word placement: absolute position in the context and relative position compared to other words in the context. This additional data makes it easier for the model to recall information over longer contexts.
 
 **YaRN** - RopE-style (see above) training method that extends the context of Llama 2 models to 128k tokens.
-
-**RLHF (Reinforcement Learning through Human Feedback)** - Feedback is generated from human input. The data then can be incorporated into the model to guide its responses. Offers more nuanced feedback than DPO.
-
-**Reward Models** - ssentially a "second layer" LLM trained to evaluate the outputs of the main LLM and assign rewards based on how desirable or acceptable those outputs are based on predefined criteria.
-
-**DPO (Diredct Preference Optimization)** - Multiple response options are given, and the human user chooses their preference. The preferences are then reintegrated into the model to further guide responses.
-
-**PPO (Proximal Policy Optimization)** - an algorithm often used in conjunction with reward models to train models. It drives the process of adjusting the LLM's behavior based on the guidance provided by the reward model. Often very sensitive to hyperparameter settings, and requires experimentationn to optimize.
 
 **CALM (Composition to Augment Language Models)** - method of augmenting models that that essentially tacks a small model into a larger one. Useful for improving a specific domain in a model without degrading its skills in other domains.
 
@@ -106,9 +108,6 @@ Performance of different quantization / file types is a subject of ongoing resea
 **Incoherenct matrices** - to add.
 
 **Adaptive rounding** - to add.
-
-**Reject sampling** - a component of fine-tuning where outputs are evaluated and unsuitable low-quality ones are excluded based on predefined criteria and the better quality outputs are fed back into the fine-tuning process.
-
 
 # Benchmarks
 Tests used to empirically evaluate the model’s capabilities in various domains. Often used in training data, resulting in a perfect showcase of overfitting /  Goodheart’s Law: “ When a measure becomes a target, it ceases to be a good measure”.
