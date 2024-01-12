@@ -245,7 +245,7 @@ Note: If your model is repeating itself uncontrollably, you have probably asked 
 
 **DruGS (Deep Random micro-Glitch Sampling)** - Injects random noise into the inference as it passes through layers, making responses more creative and less deterministic. Still experimental - work is being done to find out how many and which layers produce optimal results with noise injection.
 
-**Chunk tokens** - to add.
+**Chunk tokens** - how many tokens to process at once. More tokens allows the model to consider a wider context at the cost of greater resource usage. Low values will significantly degrade the quality of outputs.
 
 **Dynamic Temp** - Adjusts the temperature proportionally to the standard deviation of the sampled set of tokens. When there are many viable tokens, the model will select tokens of lower probability. When there are few viable tokens, the model will select higher probability tokens. Allows for more creative responses while still maintaining coherence.
 
