@@ -75,7 +75,7 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **QLoRA (Quantized Low Rank Adaptation)** - quantizes the model before training the LoRa weights. This creates a “double quant”, one for the model and one for the LoRA. Along with a few other features, this vastly reduces the resource demand for training and running the model and the LoRA.
 
-**S-LoRA** - currently in development, allows LoRAs to be “hot-swapped” between models.
+**S-LoRA (Scalable Low Rank Adaptation** - currently in development, allows LoRAs to be “hot-swapped” between models.
 
 **Fine tune** - the process of adapting a pre-trained LLM to perform well on a specific task or domain. This is often a full retraining, and thus can be resource intensive.
 
@@ -87,7 +87,11 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **RLHF (Reinforcement Learning through Human Feedback)** - Feedback is generated from human input. The data then can be incorporated into the model to guide its responses. Offers more nuanced feedback than DPO.
 
+**Reward Models** - ssentially a "second layer" LLM trained to evaluate the outputs of the main LLM and assign rewards based on how desirable or acceptable those outputs are based on predefined criteria.
+
 **DPO (Diredct Preference Optimization)** - Multiple response options are given, and the human user chooses their preference. The preferences are then reintegrated into the model to further guide responses.
+
+**PPO (Proximal Policy Optimization)** - an algorithm often used in conjunction with reward models to train models. It drives the process of adjusting the LLM's behavior based on the guidance provided by the reward model. Often very sensitive to hyperparameter settings, and requires experimentationn to optimize.
 
 **CALM (Composition to Augment Language Models)** - method of augmenting models that that essentially tacks a small model into a larger one. Useful for improving a specific domain in a model without degrading its skills in other domains.
 
