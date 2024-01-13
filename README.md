@@ -229,7 +229,7 @@ Note: If your model is repeating itself uncontrollably, you have probably asked 
 
 **Guidance scale** - The main parameter for Classifier-Free Guidance (CFG). 1.5 is recommended value.
 
-**enalty alpha** - Contrastive Search is enabled by setting this to greater than zero and unchecking "do_sample". It should be used with a low value of top_k, for instance, top_k = 4.
+**Penalty alpha** - Contrastive Search is enabled by setting this to greater than zero and unchecking "do_sample". It should be used with a low value of top_k, for instance, top_k = 4.
 
 **Do sample** - When unchecked, sampling is entirely disabled, and greedy decoding is used instead (the most likely token is always picked).
 
