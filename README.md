@@ -194,7 +194,9 @@ Some of these are base models, some of them are model modification techniques.\
 
 **XWIN** - family of models developed by XwinLM. Use supervised fine tuning, reward models, and RHLF to develop very creative, capable models.
 
-**NoroMaid** - 
+**NoroMaid** - to add.
+
+**DeepSeek** - family of models trained with self-supervized pretraining, supervised fine-tuning and DPO on 2 trillion tokens.
 
 # Controlling Outputs with Parameters and Samplers
 Most of this is taken from Text-Generation-Webui’s explanations here: https://github.com/oobabooga/text-generation-webui/wiki/03-%E2%80%90-Parameters-Tab
