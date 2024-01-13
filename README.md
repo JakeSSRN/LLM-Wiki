@@ -138,7 +138,9 @@ Tests used to empirically evaluate the model’s capabilities in various domains
 
 
 # “Flavors” of Models
-Some of these are base models, some of them are model modification techniques.
+Some of these are base models, some of them are model modification techniques.\
+
+**Chat** - a model that has been trained on chat-style interactions. Feels more conversational and can handle multi-trun interactions better.
 
 **LLaMA** - built on Google’s Transformer architecture. Very common and well integrated. Strong with factual tasks and question answering, weaker with creative tasks and coding. Base context of 4096 tokens.
 
