@@ -21,6 +21,8 @@ Note: if you have deep pockets, you can run multiple GPUs in parallel with minim
 
 **Context window** - the amount of tokens the model can keep in its “short term memory”. Once the interaction has exceeded this number of tokens, the model will no longer be aware of their content. The model will also be unable to generate a coherent response longer than its context length. Context window is generally established in training, though it can be altered somewhat through other methods discussed further down.
 
+**Tokens Per Second (TPS, t/s)** - the speed at which the model outputs tokens. 5 t/s is roughtly the lower limit for "live" feeling interactions like chat, slower than that, extended use gets tedious. Average reading speed is 8-12 t/s. Very large models or poorly optimized formats on weak hardware can drop speed to 0.5 t/s or less, and small, optimized models on strong hardware can reach 50+ t/s.
+
 **SOTA (State of the Art)** - A tag indicating a novel concept or application.
 
 # Quantization
