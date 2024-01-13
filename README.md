@@ -3,6 +3,8 @@ To jump to a section, click on the three dots and three bars icon to the right.
 
 # General Terminology
 
+**LLM (Large Language Model)** - type of artifical intelligence trained to perform natural language (human-like, not computer language) tasks.
+
 **Inference** - What LLMs are designed to do - infer what words come next in a sequence. Can be done via CPU, GPU or a combination of both. GPU inference is roughly 10x faster than CPU inference, and any use of the CPU will greatly slow down inference speed. VRAM in consumer GPUs goes up to 24 GB currently. Many models are bigger than this, so CPU inference is required to run larger models on consumer hardware.
 
 Note: if you have deep pockets, you can run multiple GPUs in parallel with minimal sacrifice to inference speed. Alternatively, you can pick up enterprise grade hardware. The current king of this is the NVIDIA H100 card with 80 GB of VRAM. They go for about $30k each. Good luck getting your hands on one.
@@ -24,6 +26,10 @@ Note: if you have deep pockets, you can run multiple GPUs in parallel with minim
 **Tokens Per Second (TPS, t/s)** - the speed at which the model outputs tokens. 5 t/s is roughtly the lower limit for "live" feeling interactions like chat, slower than that, extended use gets tedious. Average reading speed is 8-12 t/s. Very large models or poorly optimized formats on weak hardware can drop speed to 0.5 t/s or less, and small, optimized models on strong hardware can reach 50+ t/s.
 
 **Prompt** - the text you send to the model for it to inference from.
+
+**Transformer** - type of neural network architecture that excels in language tasks. Most LLMs are currently based on transformer architecture.
+
+**GPT (Generative Pretrained Transformer) - type of transformer that is trained to predict next token(s) in a sentence.
 
 **SOTA (State of the Art)** - A tag indicating a novel concept or application.
 
