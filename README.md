@@ -29,7 +29,9 @@ Note: if you have deep pockets, you can run multiple GPUs in parallel with minim
 
 **Transformer** - type of neural network architecture that excels in language tasks. Most LLMs are currently based on transformer architecture.
 
-**GPT (Generative Pretrained Transformer) - type of transformer that is trained to predict next token(s) in a sentence.
+**GPT (Generative Pretrained Transformer)** - type of transformer that is trained to predict next token(s) in a sentence.
+
+**Pre-training** - to add.
 
 **SOTA (State of the Art)** - A tag indicating a novel concept or application.
 
@@ -89,9 +91,13 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **S-LoRA (Scalable Low Rank Adaptation** - currently in development, allows LoRAs to be “hot-swapped” between models.
 
+**RoSA (Robust Adaptation)** - parameter-efficient fine-tuning method that jointly trains low-rank and highly-sparse components on top of a set of fixed pretraining weights to efficiently approximate the performance of a full fine-tune. Outperforms LoRAs at the same parameter budget.
+
 **Fine tune** - the process of adapting a pre-trained LLM to perform well on a specific task or domain. This is often a full retraining, and thus can be resource intensive.
 
-(Supervised Fine Tuning) - fine tuning using human-validated training data.
+SFT (Supervised Fine Tuning) - fine tuning using human-validated training data.
+
+PEFT (Parameter-Efficient Fine-Tuning) - methods of fine-tuning without modifying all paramters. Reduces time and resource demand of fine-tuning.
 
 RLHF (Reinforcement Learning through Human Feedback) - Feedback is generated from human input. The data then can be incorporated into the model to guide its responses. Offers more nuanced feedback than DPO.
 
