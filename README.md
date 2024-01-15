@@ -93,6 +93,8 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **RoSA (Robust Adaptation)** - parameter-efficient fine-tuning method that jointly trains low-rank and highly-sparse components on top of a set of fixed pretraining weights to efficiently approximate the performance of a full fine-tune. Outperforms LoRAs at the same parameter budget.
 
+**PESC (Parameter-Efficient Sparsity Crafting)** - transitions dense models to sparse models using a Mixture of Experts (MoE) architecture. Essentially makes each expert a LoRA rather than a full model, significantly reduces memory requirements.
+
 **Fine tune** - the process of adapting a pre-trained LLM to perform well on a specific task or domain. This is often a full retraining, and thus can be resource intensive.
 
 SFT (Supervised Fine Tuning) - fine tuning using human-validated training data.
