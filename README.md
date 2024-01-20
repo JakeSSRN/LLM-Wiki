@@ -449,6 +449,8 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 
 **Jon Durbin** - AI researcher, developed models like Airoboros and Bagel.
 
+**Maxime LaBonne** - LLM researcher, keeps a very useful blog about LLM stuff. Created the Phixtral and some of the Neural models.
+
 **Tom Jobbins / TheBloke** - Quantizes thousands of models on HF at an alarming rate. GGUF, GPTQ, AWQ, etc.
 
 **Teknium** - Cofounder of Nous Research. Aids in the development of the Nous Hermes models, among others.
