@@ -35,6 +35,8 @@ Note: if you have deep pockets, you can run multiple GPUs in parallel with minim
 
 **SOTA (State of the Art)** - A tag indicating a novel concept or application.
 
+
+
 # Quantization
 Most models are developed in 32-bit floating point (FP32) representation. This is extremely precise and captures nuanced data well, but also takes up a huge amount of space. A general rule of thumb is that 32 bit models require 4 GB of memory (RAM or VRAM) per 1 billion parameters, so a 7B model would require 28 GB or memory. This is not attainable on most consumer hardware, so models are quantized to reduce resource demand.
 
@@ -76,6 +78,7 @@ There are some exceptions to these rules. See the link ending in “1684” abov
 **EXL2 (ExLlamaV2)** - extremely fast GPU only filetype using the exllamav2 loader. Comes in various quants. Performance may degrade in zero-shot prompting compared to GGUF. Cannot be run on Tesla GPU architecture.
 
 Performance of different quantization / file types is a subject of ongoing research and debate. Currently, it seems like GGUF is the absolute highest quality method, with moderate speed, depending on how many layers you can offload. EXL2 is narrowing the gap in terms of support and availability, but may still result in slightly lower quality outputs. Essentially: quality: GGUF, speed: EXL2.
+
 
 
 # Modifying Models
@@ -129,6 +132,10 @@ Reject sampling - a component of fine-tuning where outputs are evaluated and uns
 
 **Adaptive rounding** - intelligent method of rounding weights that adapts them to minimize the error rounding produces. This reduces the damaging effects of quantization.
 
+**Brain Hacking Chip** - typical CFG only alters the logits that come out of the final layer. Brain hacking chip applies CFG to the output of every layer of the model as inference is running and applies customized CFG weights for each layer. Now comes with DRuGs. Introduced by SoylentMithril.
+
+
+
 # Benchmarks
 Tests used to empirically evaluate the model’s capabilities in various domains. Often used in training data, resulting in a perfect showcase of overfitting /  Goodheart’s Law: “ When a measure becomes a target, it ceases to be a good measure”.
 
@@ -151,6 +158,7 @@ Tests used to empirically evaluate the model’s capabilities in various domains
 **Few-shot** - 2-5 examples of the desired type of output are given in the prompt.
 
 **Many-shot** - 5-20+ examples are given to the model.
+
 
 
 # “Flavors” of Models
@@ -207,6 +215,8 @@ Some of these are base models, some of them are model modification techniques.\
 **NoroMaid** - to add.
 
 **DeepSeek** - family of models trained with self-supervized pretraining, supervised fine-tuning and DPO on 2 trillion tokens.
+
+
 
 # Controlling Outputs with Parameters and Samplers
 Most of this is taken from Text-Generation-Webui’s explanations here: https://github.com/oobabooga/text-generation-webui/wiki/03-%E2%80%90-Parameters-Tab
@@ -275,8 +285,14 @@ Note: If your model is repeating itself uncontrollably, you have probably asked 
 
 **Special tokens** - denote structure and organization of inputs, direct the model towards certain tasks or behaviors, etc. Essentially brief annotations to help the model understand how to view and use the input.
 
+**CFG (Classifier-Free Guidance)** - to add.
+
+
+
 # Instruction Formats
-The format in which instruction-following training data was appended. This whole thing is a mess, and is in dire need of standardization / unification. Using a format the model wasn’t trained for will produce poor outputs.
+The format in which instruction-following training data was appended. This whole thing is a mess, and is in dire need of standardization / unification.
+
+Using a format the model wasn’t trained for will produce poor outputs.
 
 I really don’t want to sort through this crap. I’m not even sure how to use instruction formats properly. A reddit post that details some of it can be found in the second half of this post: https://www.reddit.com/r/Oobabooga/comments/19480dr/how_to_train_your_dra_model/
 
@@ -294,6 +310,8 @@ Q4 + 4K context. Approx. values.
 | 70B | 64 GB |
 | 120B | 128 GB |
 | 180B | 192 GB |
+
+
 
 # Layers
 Different components within the model architecture. I’m not super familiar with this stuff, and it’s not terribly important to know if you just want to play around.
@@ -314,16 +332,18 @@ Different components within the model architecture. I’m not super familiar wit
 
 **V (Value) Layer** - This layer contains the actual content that will be shared in response to the query. Like a detailed definition or explanation behind the key.
 
+
+
 # Loaders
 **Transformers** - loads FP16 or FP32 models. More detail here: https://github.com/oobabooga/text-generation-webui/wiki/04-%E2%80%90-Model-Tab#transformers
 
 **Llama.cpp** (GGUFs) chances are good you're using this.
 
-  N-gpu-layers - number of layers to offload to GPU to accelerate CPU inference. 0 = CPU only.
+N-gpu-layers - number of layers to offload to GPU to accelerate CPU inference. 0 = CPU only.
 
-  N_ctx - context length of the model. Usually predetermined, but may need to be set according to the model loaded occasionally.
+N_ctx - context length of the model. Usually predetermined, but may need to be set according to the model loaded occasionally.
 
-  Threads - number of CPU threads to use. Set to 1 if all layers have been loaded into GPU. Otherwise, set to number of physical cores your CPU has.
+Threads - number of CPU threads to use. Set to 1 if all layers have been loaded into GPU. Otherwise, set to number of physical cores your CPU has.
 
 Threads_batch - number of threads for batch processing. Set to total number of physical and virtual cores your CPU has.
 
@@ -335,7 +355,7 @@ Rope_freq_base - similar to alpha value, extends context in older models like Co
 
 Compress_poss_emb - original method for extending context length. Straight across multiplier. Use only with models that have been fine tuned with this parameter adjusted.
 
-Tensorcores - 
+Tensorcores - to add.
 
 No_offload_kqv - does not offload the K, Q, V to the GPU. Saves VRAM but reduces performance
 
@@ -374,6 +394,8 @@ Cache_8bit - create 8-bit precision cache instead of 16-bit. Saves VRAM but incr
 **QUIP# (Quantization with Incoherence Processing)** - to add.
 
 **HQQ** - to add.
+
+
 
 # Common Training Data Sets
 Used to train models on specific tasks, contexts, and knowledge. Some of these overlap with the “Flavors of Models” and “Benchmarks” section.
@@ -443,7 +465,9 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 **Toxic** - toxic and illegal content designed to remove censorship from the model.
 
 
+
 # Notable Players in the LLM Space
+
 
 **Individuals:**
 
@@ -466,6 +490,7 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 **LoneStriker** - Known for quantizting hundreds of models in various levels of EXL2.
 
 **Gryphe** - developed the popular MythoMax models, as well as others. He focuses on roleplay and creative models that tend to perform very well.
+
 
 **Organizations:**
 
@@ -506,8 +531,9 @@ Used to train models on specific tasks, contexts, and knowledge. Some of these o
 **GitHub** - developer platform for sharing, collaborating on, and developing code projects. Most UIs and other AI tools can be found here.
 
 
+
 # Augmenting Models
-Ways of improving or changing a model's capabilities or performance without modifying the model.
+Ways of improving or changing a model's capabilities or performance without modifying the model itself.
 
 **RAG (Retrieval Augmented Generation)** - documents and other files of reference are uploaded and converted into a vector database. The model is then enabled to search this database and extract relevant information, which is then incorporated into the response. Helps to increase the model's factual accuracy or add information to the model without training on it.
 
@@ -521,10 +547,13 @@ Ways of improving or changing a model's capabilities or performance without modi
 
 **Horizontal Cascade** - preceding tokens for the drafts are generated by larger models and are likely to be more effective. Succeeding tokens are generated by smaller models. This ensures that the tokens are less likely to be rejected, reducing autoregression in the model. This technique reduces slowdowns in generation.
 
+
+
 # Implementation - UIs, backends, etc.
 Not comprehensive, just a list of the major players.
 
 To add.
+
 
 
 # Inbox / To Be Categorized
