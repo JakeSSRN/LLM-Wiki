@@ -48,13 +48,13 @@ Many users recommend using a smaller quant of a larger model rather than a large
 
 **S, M, and L (Quantization Mixes)** - different levels of quantization are used for different layers in the model.
 
-S = same quant level used across the whole model. Results in maximum compression and quality loss.
+- S = same quant level used across the whole model. Results in maximum compression and quality loss.
 
-M = Uses one level lower compression for the attention and feedforward layers. Slightly less compression, slightly lower quality loss than S.
+- M = Uses one level lower compression for the attention and feedforward layers. Slightly less compression, slightly lower quality loss than S.
 
-L = Uses two levels lower compression for the attention and feedforward layers. Slightly less compression, slightly lower quality loss than M.
+- L = Uses two levels lower compression for the attention and feedforward layers. Slightly less compression, slightly lower quality loss than M.
 
-There are some exceptions to these rules. See the link ending in “1684” above for more details.
+- There are some exceptions to these rules. See the link ending in “1684” above for more details.
 
 **BPW (bits per weight)** - quantization notation used mostly for EXL2 files. It tends to use more precise numbers, like 2.4, 4.65, etc. These translate roughly to the round numbers of Q quants.
 
