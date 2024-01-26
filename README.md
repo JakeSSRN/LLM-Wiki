@@ -60,7 +60,7 @@ Many users recommend using a smaller quant of a larger model rather than a large
 
 **H number (head quantization)** - Similar to K quants, but for EXL2 files. Compresses only certain layers, typically attention heads, while leaving other layers less or uncompressed.
 
-**QUIP#** (Quantization with Incoherence Processing) - a 2-bit quantization method that hugely reduces degradation. Uses incoherent matrices, lattice codebooks, and adaptive rounding. Essentially makes 2-bit quants worthwhile. See "Modifying Models" section for descriptions of these techniques.
+**QUIP# (Quantization with Incoherence Processing)** - a 2-bit quantization method that hugely reduces degradation. Uses incoherent matrices, lattice codebooks, and adaptive rounding. Essentially makes 2-bit quants worthwhile. See "Modifying Models" section for descriptions of these techniques.
 
 **SqueezeLLLM** - quantization method that intelligently applies dense and sparse quantization, incoherent matrices, lattice codebooks, and adaptive rounding.
 
@@ -76,6 +76,8 @@ Many users recommend using a smaller quant of a larger model rather than a large
 **GPTQ (Generative Pretrained Transformer Quantization)** - Quantized GPU only filetype. Quality may be sub-par compared to GGUF. Not very popular since the advent of EXL2.
 
 **EXL2 (ExLlamaV2)** - extremely fast GPU only filetype using the exllamav2 loader. Comes in various quants. Performance may degrade in zero-shot prompting compared to GGUF. Cannot be run on Tesla GPU architecture.
+
+**AQLM (Additive Quantization for Language Models** - a quantization method that uses additive vector quantization, a method that compresses values by merging mutual information between the quantized values. Reductions in perplexity under high quantization are greatest in smaller models, whereas larger models benefit less from this technique.
 
 Performance of different quantization / file types is a subject of ongoing research and debate. Currently, it seems like GGUF is the absolute highest quality method, with moderate speed, depending on how many layers you can offload. EXL2 is narrowing the gap in terms of support and availability, but may still result in slightly lower quality outputs. Essentially: quality: GGUF, speed: EXL2.
 
