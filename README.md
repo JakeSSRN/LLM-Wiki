@@ -94,7 +94,7 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **QLoRA (Quantized Low Rank Adaptation)** - quantizes the model before training the LoRa weights. This creates a “double quant”, one for the model and one for the LoRA. Along with a few other features, this vastly reduces the resource demand for training and running the model and the LoRA.
 
-**S-LoRA (Scalable Low Rank Adaptation** - currently in development, allows LoRAs to be “hot-swapped” between models.
+**S-LoRA (Scalable Low Rank Adaptation)** - currently in development, allows LoRAs to be “hot-swapped” between models.
 
 **RoSA (Robust Adaptation)** - parameter-efficient fine-tuning method that jointly trains low-rank and highly-sparse components on top of a set of fixed pretraining weights to efficiently approximate the performance of a full fine-tune. Outperforms LoRAs at the same parameter budget.
 
