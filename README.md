@@ -100,19 +100,19 @@ Performance of different quantization / file types is a subject of ongoing resea
 
 **Fine tune** - the process of adapting a pre-trained LLM to perform well on a specific task or domain. This is often a full retraining, and thus can be resource intensive.
 
-SFT (Supervised Fine Tuning) - fine tuning using human-validated training data.
+- SFT (Supervised Fine Tuning) - fine tuning using human-validated training data.
 
-PEFT (Parameter-Efficient Fine-Tuning) - methods of fine-tuning without modifying all paramters. Reduces time and resource demand of fine-tuning.
+- PEFT (Parameter-Efficient Fine-Tuning) - methods of fine-tuning without modifying all paramters. Reduces time and resource demand of fine-tuning.
 
-RLHF (Reinforcement Learning through Human Feedback) - Feedback is generated from human input. The data then can be incorporated into the model to guide its responses. Offers more nuanced feedback than DPO.
+- RLHF (Reinforcement Learning through Human Feedback) - Feedback is generated from human input. The data then can be incorporated into the model to guide its responses. Offers more nuanced feedback than DPO.
 
-Reward Models - essentially a "second layer" LLM trained to evaluate the outputs of the main LLM and assign rewards based on how desirable or acceptable those outputs are based on predefined criteria.
+- Reward Models - essentially a "second layer" LLM trained to evaluate the outputs of the main LLM and assign rewards based on how desirable or acceptable those outputs are based on predefined criteria.
 
-DPO (Diredct Preference Optimization) - Multiple response options are given, and the human user chooses their preference. The preferences are then reintegrated into the model to further guide responses.
+- DPO (Diredct Preference Optimization) - Multiple response options are given, and the human user chooses their preference. The preferences are then reintegrated into the model to further guide responses.
 
-PPO (Proximal Policy Optimization) - an algorithm often used in conjunction with reward models to train models. It drives the process of adjusting the LLM's behavior based on the guidance provided by the reward model. Often very sensitive to hyperparameter settings, and requires experimentationn to optimize.
+- PPO (Proximal Policy Optimization) - an algorithm often used in conjunction with reward models to train models. It drives the process of adjusting the LLM's behavior based on the guidance provided by the reward model. Often very sensitive to hyperparameter settings, and requires experimentationn to optimize.
 
-Reject sampling - a component of fine-tuning where outputs are evaluated and unsuitable low-quality ones are excluded based on predefined criteria and the better quality outputs are fed back into the fine-tuning process.
+- Reject sampling - a component of fine-tuning where outputs are evaluated and unsuitable low-quality ones are excluded based on predefined criteria and the better quality outputs are fed back into the fine-tuning process.
 
 **RoPE (Rotary Position Embeddings)** - instead of relating words in the context only to their neighbors, RoPE assigns two values to word placement: absolute position in the context and relative position compared to other words in the context. This additional data makes it easier for the model to recall information over longer contexts.
 
@@ -339,41 +339,41 @@ Different components within the model architecture. I’m not super familiar wit
 
 **Llama.cpp** (GGUFs) chances are good you're using this.
 
-N-gpu-layers - number of layers to offload to GPU to accelerate CPU inference. 0 = CPU only.
+- N-gpu-layers - number of layers to offload to GPU to accelerate CPU inference. 0 = CPU only.
 
-N_ctx - context length of the model. Usually predetermined, but may need to be set according to the model loaded occasionally.
+- N_ctx - context length of the model. Usually predetermined, but may need to be set according to the model loaded occasionally.
 
-Threads - number of CPU threads to use. Set to 1 if all layers have been loaded into GPU. Otherwise, set to number of physical cores your CPU has.
+- Threads - number of CPU threads to use. Set to 1 if all layers have been loaded into GPU. Otherwise, set to number of physical cores your CPU has.
 
-Threads_batch - number of threads for batch processing. Set to total number of physical and virtual cores your CPU has.
+- Threads_batch - number of threads for batch processing. Set to total number of physical and virtual cores your CPU has.
 
-N_batch - batch size for prompt processing. 
+- N_batch - batch size for prompt processing. 
 
-Alpha _value - extends context length of a model with minor quality loss. 1.75 = 1.5x context, 25 = 2x context length.
+- Alpha _value - extends context length of a model with minor quality loss. 1.75 = 1.5x context, 25 = 2x context length.
 
-Rope_freq_base - similar to alpha value, extends context in older models like CodeLlama that have been finetuned with longer contexts.
+- Rope_freq_base - similar to alpha value, extends context in older models like CodeLlama that have been finetuned with longer contexts.
 
-Compress_poss_emb - original method for extending context length. Straight across multiplier. Use only with models that have been fine tuned with this parameter adjusted.
+- Compress_poss_emb - original method for extending context length. Straight across multiplier. Use only with models that have been fine tuned with this parameter adjusted.
 
-Tensorcores - to add.
+- Tensorcores - utilize Nvidia tensor cores to accelerate inference. Provides small gain in speed.
 
-No_offload_kqv - does not offload the K, Q, V to the GPU. Saves VRAM but reduces performance
+- No_offload_kqv - does not offload the K, Q, V to the GPU. Saves VRAM but reduces performance
 
-No_mul_mat_q - disables the multi matrix kernels. Likely reduces inference quality, especially at long contexts. Not sure why this would need to be used.
+- No_mul_mat_q - disables the multi matrix kernels. Likely reduces inference quality, especially at long contexts. Not sure why this would need to be used.
 
-No-mmap - loads the model into memory at once, possibly preventing I/O operations later on at the cost of a longer load time.
+- No-mmap - loads the model into memory at once, possibly preventing I/O operations later on at the cost of a longer load time.
 
-Mlock - force the system to keep the model in RAM rather than swapping or compressing. Unsure of why this would be used.
+- Mlock - force the system to keep the model in RAM rather than swapping or compressing. Unsure of why this would be used.
 
-Numa - non-uniform memory access. May accelerate inference on multi-cPU systems.
+- Numa - non-uniform memory access. May accelerate inference on multi-cPU systems.
 
-cpu - force CPU-compiled version of llama.cpp that uses CPU only. Activated if llama.cpp doesn’t work otherwise.
+- cpu - force CPU-compiled version of llama.cpp that uses CPU only. Activated if llama.cpp doesn’t work otherwise.
 
-Tensor_split - if you have multiple GPUs, sets the amount of memory to allocate per GPU.
+- Tensor_split - if you have multiple GPUs, sets the amount of memory to allocate per GPU.
 
-No_use_fast - disables fast version of tokenizer. Use only if the tokenizer for the model doesn’t work at first.
+- No_use_fast - disables fast version of tokenizer. Use only if the tokenizer for the model doesn’t work at first.
 
-Disable_exllama - use when loading GPTQ models with transformers loader. They will not work otherwise.
+- Disable_exllama - use when loading GPTQ models with transformers loader. They will not work otherwise.
 
 **HF loaders** - Similar to non-HF loaders, but with transformers samplers, and using the transformers tokenizer instead of the internal llama.cpp tokenizer.
 
