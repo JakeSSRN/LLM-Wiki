@@ -60,9 +60,9 @@ There are some exceptions to these rules. See the link ending in “1684” abov
 
 **H number (head quantization)** - Similar to K quants, but for EXL2 files. Compresses only certain layers, typically attention heads, while leaving other layers less or uncompressed.
 
-**QUIP#** (Quantization with Incoherence Processing) - a 2-bit quantization method that hugely reduces degradation. Uses incoherent matrices, lattice codebooks, and adaptive rounding. Essentially makes 2-bit quants worthwhile.
+**QUIP#** (Quantization with Incoherence Processing) - a 2-bit quantization method that hugely reduces degradation. Uses incoherent matrices, lattice codebooks, and adaptive rounding. Essentially makes 2-bit quants worthwhile. See "Modifying Models" section for descriptions of these techniques.
 
-**SqueezeLLLM** - quantization method that intelligently applies dense and sparse quantization, incoherent matrices, lattice codebooks, and adaptive rounding (see above).
+**SqueezeLLLM** - quantization method that intelligently applies dense and sparse quantization, incoherent matrices, lattice codebooks, and adaptive rounding.
 
 # File Types
 **FP16** - the original, unquantized format of most models. Highest inference quality, massive resource use. Currently required for training LoRAs.
