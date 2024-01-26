@@ -79,7 +79,7 @@ Many users recommend using a smaller quant of a larger model rather than a large
 
 **AQLM (Additive Quantization for Language Models** - a quantization method that uses additive vector quantization, a method that compresses values by merging mutual information between the quantized values. Reductions in perplexity under high quantization are greatest in smaller models, whereas larger models benefit less from this technique.
 
-Performance of different quantization / file types is a subject of ongoing research and debate. Currently, it seems like GGUF is the absolute highest quality method, with moderate speed, depending on how many layers you can offload. EXL2 is narrowing the gap in terms of support and availability, but may still result in slightly lower quality outputs. Essentially: quality: GGUF, speed: EXL2.
+Performance of different quantization / file types is a subject of ongoing research and debate. Currently, it seems like GGUF is the absolute highest quality method, with moderate speed, depending on how many layers you can offload. EXL2 is narrowing the gap in terms of support and availability, but may still result in slightly lower quality outputs. Essentially: fidelity: GGUF, speed: EXL2.
 
 
 
