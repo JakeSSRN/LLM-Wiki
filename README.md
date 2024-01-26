@@ -375,13 +375,13 @@ Different components within the model architecture. I’m not super familiar wit
 
 - Disable_exllama - use when loading GPTQ models with transformers loader. They will not work otherwise.
 
+- Cache_8bit - create 8-bit precision cache instead of 16-bit. Saves VRAM but increases perplexity. Use allows for very long contexts lengths more easily.
+
 **HF loaders** - Similar to non-HF loaders, but with transformers samplers, and using the transformers tokenizer instead of the internal llama.cpp tokenizer.
 
 **ExLlama** - to add.
 
 **ExLlamav2** - loads GPTQ and EXL2 models.
-
-Cache_8bit - create 8-bit precision cache instead of 16-bit. Saves VRAM but increases perplexity. Use allows for very long contexts lengths more easily.
 
 **AutoGPTQ** - to add.
 
