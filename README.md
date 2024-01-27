@@ -563,6 +563,8 @@ I haven't looked into these yet.
 
 **Grammar** - to add.
 
+**Vocab / size** - to add.
+
 **Voxta** - to add.
 
 **VaM** - to add.
