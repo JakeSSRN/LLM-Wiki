@@ -578,3 +578,7 @@ I haven't looked into these yet.
 **Triton** - to add.
 
 **Z-loss** - to add
+
+**MLC LLM / Vulkan** - to add.
+
+**RWKV** - to add.
