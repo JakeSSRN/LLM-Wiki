@@ -273,7 +273,7 @@ Note: If your model is repeating itself uncontrollably, you have probably asked 
 
 **Encoder repetitions penalty** - Also known as the "Hallucinations filter". Used to penalize tokens that are not in the prior text. Higher value = more likely to stay in context, lower value = more likely to diverge.
 
-**No repeat ngram size** - If not set to 0, specifies the length of token sets that are completely blocked from repeating at all. Higher values = blocks larger phrases, lower values = blocks words or letters from repeating. Only 0 or high values are a good idea in most cases.
+**No repeat ngram size** - If not set to 0, specifies the length of token sets that are completely blocked from repeating at all. Higher values = blocks larger phrases, lower values = blocks words or letters from repeating. Only 0 or high values are a good idea in most cases. Essentially prevents repetition of full phrases, incluing from the prompt. Prevents parroting.
 
 **Num beams** - Number of beams for beam search. 1 means no beam search. [What is beam search?]
 
